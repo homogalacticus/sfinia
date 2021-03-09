@@ -1,0 +1,626 @@
+/*
+  The original subSilver Theme for phpBB version 2+
+  Created by subBlue design
+  http://www.subBlue.com
+  NOTE: These CSS definitions are stored within the main page body so that you can use the phpBB2
+  theme administration centre. When you have finalised your style you could cut the final CSS code
+  and place it in an external file, deleting this section to save bandwidth.
+*/
+/* Private */
+.ogloszenie {
+    margin: 0px 0px 0px 0px;
+    border: medium double red; 
+    background-color: yellow;
+}
+hr.ogloszenie { 
+  margin: 5px 0px 5px 0px;
+  border: 1px solid red; 
+}
+div.sn,body.sn {
+    background-color: #FFFFa0;
+}
+.rightSmall {
+    text-align:right; 
+    padding:5px 0px 0px 0px;
+}
+select.sn {
+    width: 460px;
+    background-color:#ffffc0;
+}
+form.sn {
+    margin: 0px;
+}
+/* General page style. The scroll bar colours only visible in IE5.5+ */
+:root {
+    --maxTableWidth: 100vw;
+    --maxTdWidth: calc(var(--maxTableWidth) * 0.85);
+    --maxSpanWidth: calc(var(--maxTableWidth) - 250px);
+    --maxImgWidth: calc(var(--maxTableWidth) - 300px);
+    --maxTestWidth: 100px;
+}
+body {
+	background-color: #fffcfc; max-width: 100vw;
+}
+/* This are cells that are messed up by some antispam re-formatting commands */
+td[nowrap="nowrap"] {
+     max-width: 100%; word-wrap: normal; white-space: nowrap; 
+     /*background: pink; */
+}
+/* This is the bottom line with the range of available pages */
+td[align="left"][valign="middle"][width="100%"]{
+     max-width: 30%; word-wrap: normal; white-space: nowrap; 
+     /*background: powderblue;*/
+}
+/* This is needed to reduce oversize images and break lines in spam. See also the commands following the .postbody selectror */
+img {
+    max-width: var(--maxImgWidth);  overflow: scroll;
+}
+span {
+     max-width: var(--maxSpanWidth); word-wrap: break-word; white-space: normal; 
+     display: inline-block;
+}
+/* This one removes intrusive adds inserted into topmost post that break the text flow */
+span[style*="float: right;"] {
+  background: red; position: absolute; top: 0; left: 0; height: 0; overflow: hidden;
+}
+/* And this one restores the right look of the main page and of the sub-fora content lists */
+span.postdetails,span.gensmall {
+     word-wrap: inherit; white-space: inherit; 
+}
+/* The two shoutboxes */
+#cboxdiv {
+  min-width: calc(var(--maxImgWidth) * 0.6);  margin: auto;
+  height: 400px; 
+}
+#cboxmain,#cboxform {
+  min-width: calc(var(--maxImgWidth) * 0.6);  margin: auto;
+}
+#ishoutboxframe {
+  min-width: calc(var(--maxImgWidth) * 0.6); margin: auto;
+  height: 780px; 
+}
+
+/* General font families for common tags */
+font,th,td,p { font-family: Verdana, Arial, Helvetica, sans-serif }
+a:link,a:active,a:visited { color : #800000; }
+a:hover		{ text-decoration: underline; color : #DD6900; }
+hr	{ height: 0px; border: solid #f0ee81 0px; border-top-width: 1px;}
+/* This is the border line & background colour round the entire page */
+.bodyline	{ background-color: #FFFFFF; border: 1px #cc9999 solid; }
+/* This is the outline round the main forum tables */
+.forumline	{ background-color: #FFFFFF; border: 2px #BC8F8F solid; }
+/* Main table cell colours and backgrounds */
+td.row1	{ background-color: #f8f8e8; }
+td.row2	{ background-color: #fbfbd0; }
+td.row3	{ background-color: #f0ee81; }
+/*
+  This is for the table cell above the Topics, Post & Last posts on the index.php page
+  By default this is the fading out gradiated silver background.
+  However, you could replace this with a bitmap specific for each forum
+*/
+td.rowpic {
+		background-color: #FFFFFF;
+		background-image: url(http://picsrv.fora.pl/subSilver/images/subRed/cellpic2.jpg);
+		background-repeat: repeat-y;
+}
+/* Header cells - the blue and silver gradient backgrounds */
+th	{
+	color: #FFB572; font-size: 11px; font-weight : bold;
+	background-color: #800000; height: 25px;
+	background-image: url(http://picsrv.fora.pl/subSilver/images/subRed/cellpic3.gif);
+}
+td.cat,td.catHead,td.catSides,td.catLeft,td.catRight,td.catBottom {
+			background-image: url(http://picsrv.fora.pl/subSilver/images/subRed/cellpic1.gif);
+			background-color:#f0ee81; border: #FFFFFF; border-style: solid; height: 28px;
+}
+/*
+  Setting additional nice inner borders for the main table cells.
+  The names indicate which sides the border will be on.
+  Don't worry if you don't understand this, just ignore it :-)
+*/
+td.cat,td.catHead,td.catBottom {
+	height: 29px;
+	border-width: 0px 0px 0px 0px;
+}
+th.thHead,th.thSides,th.thTop,th.thLeft,th.thRight,th.thBottom,th.thCornerL,th.thCornerR {
+	font-weight: bold; border: #FFFFFF; border-style: solid; height: 28px;
+}
+td.row3Right,td.spaceRow {
+	background-color: #f0ee81; border: #FFFFFF; border-style: solid;
+}
+th.thHead,td.catHead { font-size: 12px; border-width: 1px 1px 0px 1px; }
+th.thSides,td.catSides,td.spaceRow	 { border-width: 0px 1px 0px 1px; }
+th.thRight,td.catRight,td.row3Right	 { border-width: 0px 1px 0px 0px; }
+th.thLeft,td.catLeft	  { border-width: 0px 0px 0px 1px;}
+th.thBottom,td.catBottom  { border-width: 0px 1px 1px 1px; }
+th.thTop	 { border-width: 1px 0px 0px 0px; }
+th.thCornerL { border-width: 1px 0px 0px 1px; }
+th.thCornerR { border-width: 1px 1px 0px 0px; }
+/* The largest text used in the index page title and toptic title etc. */
+.maintitle	{
+	font-weight: bold; font-size: 22px; font-family: "Trebuchet MS",Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: none; line-height : 120%; color : #000000;
+}
+/* General text */
+.gen { font-size : 12px; }
+.genmed, .sn { font-size : 11px; }
+.gensmall { font-size : 10px; }
+.gen,.genmed,.gensmall, .sn { color : #000000; }
+a.gen,a.genmed,a.gensmall, a.sn { color: #800000; text-decoration: none; }
+a.gen:hover,a.genmed:hover,a.gensmall:hover, a.sn:hover	{ color: #DD6900; text-decoration: underline; }
+/* The register, login, search etc links at the top of the page */
+.mainmenu		{ font-size : 11px; color : #000000 }
+a.mainmenu		{ text-decoration: none; color : #800000;  }
+a.mainmenu:hover{ text-decoration: underline; color : #DD6900; }
+/* Forum category titles */
+.cattitle		{ font-weight: bold; font-size: 12px ; letter-spacing: 1px; color : #800000}
+a.cattitle		{ text-decoration: none; color : #800000; }
+a.cattitle:hover{ text-decoration: underline; }
+/* Forum title: Text and link to the forums used in: index.php */
+.forumlink		{ font-weight: bold; font-size: 12px; color : #800000; }
+a.forumlink 	{ text-decoration: none; color : #800000; }
+a.forumlink:hover{ text-decoration: underline; color : #DD6900; }
+/* Used for the navigation text, (Page 1,2,3 etc) and the navigation bar when in a forum */
+.nav			{ font-weight: bold; font-size: 11px; color : #000000;}
+a.nav			{ text-decoration: none; color : #800000; }
+a.nav:hover		{ text-decoration: underline; }
+/* titles for the topics: could specify viewed link colour too */
+.topictitle,h1,h2	{ font-weight: bold; font-size: 11px; color : #000000; }
+a.topictitle:link   { text-decoration: none; color : #800000; }
+a.topictitle:visited { text-decoration: none; color : #b00000; }
+a.topictitle:hover	{ text-decoration: underline; color : #DD6900; }
+/* Name of poster in viewmsg.php and viewtopic.php and other places */
+.name			{ font-size: 11px; color : #000000;}
+/* Location, number of posts, post date etc */
+.postdetails		{ font-size: 10px; color : #000000; }
+/* The content of the posts (body of text) */
+.postbody { font-size: 12px; line-height: 18px; 
+     /*max-width: var(--maxSpanWidth); word-wrap: break-word; white-space: normal;*/
+}
+a.postlink:link	{ text-decoration: none; color : #800000 }
+a.postlink:visited { text-decoration: none; color : #b00000; }
+a.postlink:hover { text-decoration: underline; color : #DD6900}
+/* Quote & Code blocks */
+.code {
+	font-family: Courier, 'Courier New', sans-serif; font-size: 11px; color: #800000;
+	background-color: #FAFAFA; border: #f0ee81; border-style: solid;
+	border-left-width: 1px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;
+    max-width: var(--maxSpanWidth); word-wrap: break-word; white-space: normal;
+}
+.quote {
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #444444; line-height: 125%;
+	background-color: #FAFAFA; border: #f0ee81; border-style: solid;
+	border-left-width: 1px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;
+    max-width: var(--maxSpanWidth); word-wrap: break-word; white-space: normal;
+}
+/* Copyright and bottom info */
+.copyright		{ font-size: 10px; font-family: Verdana, Arial, Helvetica, sans-serif; color: #444444; letter-spacing: -1px;}
+a.copyright		{ color: #444444; text-decoration: none;}
+a.copyright:hover { color: #000000; text-decoration: underline;}
+/* Form elements */
+input,textarea, select {
+	color : #000000; min-width: 80%;
+	font: normal 11px Verdana, Arial, Helvetica, sans-serif;
+	border-color : #000000;
+}
+/* The text input fields background colour */
+input.post, textarea.post, select {
+	background-color : #FFFFFF;
+}
+/* This are the login forms */
+td[align="right"] + td { 
+    max-width: 50%; display: block;
+	/*background: red;*/
+}
+input { text-indent : 2px; }
+/* The buttons used for bbCode styling in message post */
+input.button {
+	background-color : #f8f8e8;
+	color : #000000;
+	font-size: 11px; font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+/* The main submit button option */
+input.mainoption {
+	background-color : #FAFAFA;
+	font-weight : bold;
+}
+/* None-bold submit button */
+input.liteoption {
+	background-color : #FAFAFA;
+	font-weight : normal;
+}
+/* This is the line in the posting page which shows the rollover
+  help line. This is actually a text box, but if set to be the same
+  colour as the background no one will know ;)
+*/
+.helpline { background-color: #fbfbd0; border-style: none; }
+/* Import the fancy styles for IE only (NS4.x doesn't use the @import function) */
+/* @import url("http://picsrv.fora.pl/subSilver/formIE.css"); */
+
+/*** ============================================================== ***/
+       czesc nowa
+/*** ============================================================== ***/
+
+ /* Ponizszy kod nalezy umiescic na koncu oryginalnego sfinia.css */
+
+@media (max-width: 760px) {
+   
+  /* Ustawienia ogolne */
+
+:root {
+    --maxTableWidth: 100%;
+    --maxTdWidth: 100%;
+    --maxSpanWidth: 100%;
+    --maxImgWidth: 80vw;
+    --maxTestWidth: 100px;
+}
+  * {word-break: break-word !important;} 
+  
+  img {max-height: 80vh}
+  span.postbody img {max-width: 98%}
+  
+ body, div, table, tr, th, td, span {max-width: 100%;}
+ td:not(table.forumline td) {display: block;}
+ 
+  span.nav {min-width: 88vw; display: block}
+  
+  span.mainmenu a {display: block; font-size: 10pt} 
+  span.mainmenu img {height: 20px; width: 20px}
+  table tr td:only-child {text-align: left}
+ 
+  td.bodyline > table:not(table.forumline) > tbody > tr > td:first-of-type {text-align: center}
+  td.bodyline > table:not(table.forumline) > tbody > tr > td[valign="middle"]:first-of-type {text-align: left}
+  
+  a.shortcuts-link {font-size: 10pt !important;}
+  
+  select {display:block; min-width: 50px; max-width: 300px}
+  input {min-width: 25px; max-width: 200px; text-indent: 0px; padding: 3px}
+  textarea {max-width: 88vw}
+  
+  div.DoRiA {display: none}
+  ins {display: none !important;} 
+  
+  tr, td, th {height: auto !important; min-height: 14px !important;}
+   
+  /* Strona glowna i Spis kategorii */
+
+  td.bodyline > table.forumline[cellpadding="2"]
+    tr td {display: none}
+    
+  td.bodyline > table.forumline[cellpadding="2"] 
+    tr:nth-child(1) {display: none;}
+   td.bodyline > table.forumline[cellpadding="2"]
+    tr td:nth-child(2) {display: block; height: auto; min-height: 50px; padding-top: 8px}
+  td.bodyline > table.forumline[cellpadding="2"]
+    tr td:nth-child(5) {display: block}
+
+  td.bodyline > table.forumline[cellpadding="2"]
+    tr td:nth-child(2) br {display: none}
+  td.bodyline > table.forumline[cellpadding="2"]
+    tr td:nth-child(2) span {display: block; margin-top: 4px; width: auto; max-width: 100%}
+  td.bodyline > table.forumline[cellpadding="2"]
+    tr td:nth-child(2) span.forumlink {background-color: #DDD; padding: 4px}
+  
+  td.bodyline > table.forumline[cellpadding="2"]
+    tr td[align=center]::before {content: "Ostatni post: "; font-size: 8pt; font-weight: bold}
+  td.bodyline > table.forumline[cellpadding="2"]
+    tr td:nth-child(5) br {display: none}
+  td.bodyline > table.forumline[cellpadding="2"]
+    tr td:nth-child(5) a {margin-left : 10px; font-size: 9pt}
+  td.bodyline > table.forumline[cellpadding="2"]
+    tr td:nth-child(5) a img {height: 14px}
+  
+  td.bodyline > table.forumline[cellpadding="2"]
+    tr td.rowpic {display: none}
+  td.bodyline > table.forumline[cellpadding="2"]
+    tr td.catLeft {display: block; text-align: center; margin-top: 4px}
+  td.bodyline > table.forumline[cellpadding="2"]
+    tr td.catLeft span.cattitle {padding: 4px}  
+   
+  
+    /* Spis grup */
+  
+  td.bodyline > table.forumline[cellpadding="4"]
+     td:nth-child(1) {display: block}
+  td.bodyline > table.forumline[cellpadding="4"]
+     td:nth-child(2)[align="right"] {display: block}
+  
+  td.bodyline > table.forumline[cellpadding="4"]
+     select {margin-right: 4px}
+  
+   td.bodyline > table.forumline[cellpadding="4"]
+     th.thHead[colspan="2"] {display: table-cell}
+
+  /* Spis podforow */
+
+   form[action*=","] table.forumline[cellpadding="4"]  
+	  td {display: table-cell}
+  
+  form[action*=","] table.forumline[cellpadding="4"]  
+	  tr td {height: auto !important; min-height: 14px !important}
+
+  form[action*=","] table.forumline[cellpadding="4"]
+	  tr:nth-child(1) {display: none;}
+	form[action*=","] table.forumline[cellpadding="4"]  
+	  tr td {display: none}
+  form[action*=","] table.forumline[cellpadding="4"]
+	  tr td:nth-child(2) {display: block}
+  form[action*=","] table.forumline[cellpadding="4"]
+	  tr td:nth-child(4) {display: block}
+  form[action*=","] table.forumline[cellpadding="4"]
+	  tr td:nth-child(6) {display: block; margin-bottom: 4px}
+	  
+  form[action*=","] table.forumline[cellpadding="4"]
+	  td:nth-child(2) {border-top: solid black 1px}
+  form[action*=","] table.forumline[cellpadding="4"]
+	  td:nth-child(6) {border-bottom: solid black 1px}
+
+	form[action*=","] table.forumline[cellpadding="4"]  
+	  tr td:nth-child(2) span {display: block; width: auto; max-width: 100%}
+  form[action*=","] table.forumline[cellpadding="4"]
+	  tr td br {display: none}
+  form[action*=","] table.forumline[cellpadding="4"]
+	  tr td a.topictitle {font-size: 10pt}
+	 
+  form[action*=","] table.forumline[cellpadding="4"]
+	  tr td:nth-child(6) span.postdetails a {margin-left: 10px; font-size: 9pt}
+  form[action*=","] table.forumline[cellpadding="4"]
+	  tr td:nth-child(6) span.postdetails a {margin-left: 10px; font-size: 9pt}
+  form[action*=","] table.forumline[cellpadding="4"]
+	  tr td:nth-child(6) img {height: 14px}
+	
+  form[action*=","] table.forumline[cellpadding="4"]
+	  tr td:nth-child(4)::before {content: "Autor: "; font-size: 8pt; font-weight: bold}
+  form[action*=","] table.forumline[cellpadding="4"]
+	  tr td:nth-child(6)::before {content: "Ostatni post: "; font-size: 8pt; font-weight: bold}
+	form[action*=","] table.forumline[cellpadding="4"]  
+	  tr td:nth-child(6) {background-color: #f7f787}
+  
+	form[action*=","] table.forumline[cellpadding="4"]  
+	  td {width: auto; min-width: 100px}     
+      
+  /* Widok postow */
+     
+  td.bodyline > table.forumline[cellpadding="3"]
+     th[class^="th"] {display: none}
+  td.bodyline > table.forumline[cellpadding="3"]
+		 td.row1 {display: block; width: auto; height: auto}
+  td.bodyline > table.forumline[cellpadding="3"]
+		 td.row2 {display: block; width: auto; height: auto}
+	
+  td.bodyline > table.forumline[cellpadding="3"]
+		 tr[align="right"] > td[colspan="2"].catHead {display: none}
+  td.bodyline > table.forumline[cellpadding="3"]
+		 td.catBottom {height: 80px}
+  td.bodyline > table.forumline[cellpadding="3"]
+		 td.catBottom table {width: 100%;}
+  td.bodyline > table.forumline[cellpadding="3"]
+		 td.catBottom input {margin-top: 4px}
+	
+  td.bodyline > table.forumline[cellpadding="3"]
+		 span {min-width: 50px; max-width: 100%;}
+		
+  td.bodyline > table.forumline[cellpadding="3"]
+		 > tbody > tr:nth-child(4) > td[width="150"][valign="top"][align="left"]:first-child 
+		  {display: inline-block; text-align: left; width: 99%; vertical-align: top; background-color: #ded}
+  td.bodyline > table.forumline[cellpadding="3"]
+		 > tbody > tr:nth-child(4) > td:first-child span.name {font-size: 10pt}
+  td.bodyline > table.forumline[cellpadding="3"]
+		 > tbody > tr:nth-child(4) > td:first-child span.postdetails {display: inline}
+  
+	td.bodyline > table.forumline[cellpadding="3"]	 
+		 > tbody > tr:nth-child(4) > td:first-child span.postdetails br {display: none}
+  td.bodyline > table.forumline[cellpadding="3"]
+		 > tbody > tr:nth-child(4) > td:first-child span.postdetails br:nth-of-type(1) {display: block}
+  td.bodyline > table.forumline[cellpadding="3"]
+		 > tbody > tr:nth-child(4) > td:first-child span.postdetails br:nth-of-type(7) {display: block}
+ td.bodyline > table.forumline[cellpadding="3"] 
+		 > tbody > tr:nth-child(4) > td:first-child span.postdetails br:nth-of-type(8) {display: block}
+  
+  td.bodyline > table.forumline[cellpadding="3"]
+		 img[title="Post"] {width: 25px; height: 20px}
+	
+  td.bodyline > table.forumline[cellpadding="3"]
+		 span.postdetails input {display: none} 
+  td.bodyline > table.forumline[cellpadding="3"]
+		 span.postdetails img {display: inline} 
+  td.bodyline > table.forumline[cellpadding="3"]
+		 span.postdetails form {display: inline}
+	
+  td.bodyline > table.forumline[cellpadding="3"]
+		 tbody[id] {display: none} 
+  td.bodyline > table.forumline[cellpadding="3"]
+		 span.postdetails span.gen {display: block} 
+   
+  /* Edycja posta i Edycja PM */
+  
+ form[name="post"] table.forumline[cellpadding="3"]
+  > tbody > tr > td {display: block; width: 99%}
+  
+ form[name="post"] table.forumline[cellpadding="3"]
+  input[name="subject"] {width: 98%; min-width: 88vw}
+  
+  form[name="post"] table.forumline[cellpadding="3"]
+  td[colspan="4"] span.nav {display: inline}
+  
+  form[name="post"] table.forumline[cellpadding="3"] 
+  table[width="450"] {max-width: 380px !important;}
+  
+  form[name="post"] table.forumline[cellpadding="3"] 
+    span.genmed {margin: 0; padding: 0}
+  form[name="post"] table.forumline[cellpadding="3"] 
+    input[type="button"] {margin: 0; padding: 0}
+
+  form[name="post"] table.forumline[cellpadding="3"]
+    input.helpline {min-width: 88vw}
+  
+  form[name="post"] table.forumline[cellpadding="3"] table[cellpadding="5"]
+    tr {display: contents}
+  form[name="post"] table.forumline[cellpadding="3"] table[cellpadding="5"]
+  td {max-height: 20px; padding : 3px}
+  form[name="post"] table.forumline[cellpadding="3"] table[cellpadding="5"]
+    tr:first-child {display: table-row}
+  form[name="post"] table.forumline[cellpadding="3"] table[cellpadding="5"]
+    tr:nth-child(5) {display: table-row}
+  form[name="post"] table.forumline[cellpadding="3"] table[cellpadding="5"]
+    tr:last-child {display: table-row}
+       
+   /* Skrzynka PM */
+  
+  form[name="privmsg_list"] table.forumline th {display: none}
+  form[name="privmsg_list"] table.forumline td {display: block; width: 99%}
+  form[name="privmsg_list"] table.forumline td:first-child {text-align: left}
+  form[name="privmsg_list"] table.forumline td:last-child {border-bottom: 1px solid lightgray}
+  table.bodyline[width="175"] {width: 99%; margin-top: 10px; border: 2px solid gray}
+  table.bodyline[width="175"] td {width: 99%}
+  
+  /* Podglad PM */
+  
+  form[action*="privmsg.php?folder"] 
+    table.forumline td.row2 {min-width: 55px} 
+ 
+ /* Widok profilu uzytkownika */ 
+  
+  td.bodyline > table.forumline[cellpadding="3"][align="center"] 
+    tr {display: table-row}
+  td.bodyline > table.forumline[cellpadding="3"][align="center"] 
+   > tbody > tr:nth-child(2) > td[class^="cat"] {display: none}
+  td.bodyline > table.forumline[cellpadding="3"][align="center"] 
+    th {display: table-cell}
+  td.bodyline > table.forumline[cellpadding="3"][align="center"] 
+    td {text-align: left; min-width : 124px}
+  td.bodyline > table.forumline[cellpadding="3"][align="center"] 
+    td:last-child {min-width: 99%}
+ 
+ /* Spis uzytkownikow */  
+  
+  form[action$="memberlist.php"] table.forumline
+    th:nth-child(1) {display: none}
+  form[action$="memberlist.php"] table.forumline
+    td:nth-child(1) {display: none}
+  
+    form[action$="memberlist.php"] table.forumline
+    th:nth-child(2) {display: none}
+  form[action$="memberlist.php"] table.forumline
+    td:nth-child(2) {display: none}
+  
+    form[action$="memberlist.php"] table.forumline
+    th:nth-child(4) {display: none}
+  form[action$="memberlist.php"] table.forumline
+    td:nth-child(4) {display: none}
+  
+    form[action$="memberlist.php"] table.forumline
+    th:last-child {display: none}
+  form[action$="memberlist.php"] table.forumline
+    td:last-child {display: none}
+  
+    form[action$="memberlist.php"] table.forumline
+    td {text-align: left}
+  
+  /* FAQ systemowe */
+  
+    td.bodyline > table.forumline[cellpadding="3"]
+     th[class="thHead"] {display: table-cell}
+  
+  /* Widok wyszukiwarki */
+  
+   form[action*="search.php"] table.forumline
+    td {display: block; text-align: left; max-width: 99%; width: 99%}
+  
+   /* Widok wynikow wyszukiwania bez postow */
+  
+  td.bodyline > table.forumline[cellpadding="4"] 
+    > tbody > tr > th.thCornerL[width="4%"] {display: none}
+  td.bodyline > table.forumline[cellpadding="4"] 
+    > tbody > tr > td:nth-child(1) {display: none}
+
+  td.bodyline > table.forumline[cellpadding="4"] 
+    > tbody > tr > th.thTop:nth-child(4) {display: none}
+  td.bodyline > table.forumline[cellpadding="4"] 
+    > tbody > tr > td:nth-child(4) {display: none}
+  
+    td.bodyline > table.forumline[cellpadding="4"] 
+    > tbody > tr > th.thTop:nth-child(5) {display: none}
+  td.bodyline > table.forumline[cellpadding="4"] 
+    > tbody > tr > td:nth-child(5) {display: none}
+  
+    td.bodyline > table.forumline[cellpadding="4"] 
+    > tbody > tr > th.thTop:nth-child(6) {display: none}
+  td.bodyline > table.forumline[cellpadding="4"] 
+    > tbody > tr > td:nth-child(6) {display: none}
+  
+   td.bodyline > table.forumline[cellpadding="4"] 
+    > tbody > tr > th.thCornerR:nth-child(7) {display: none}
+  td.bodyline > table.forumline[cellpadding="4"] 
+    > tbody > tr > td:nth-child(7) {display: none}
+  
+  /* Widok wynikow wyszukiwania z postami */
+  
+  td.bodyline > table.forumline[cellpadding="3"]
+    th.thCornerL[width="150"] {display: none}
+  td.bodyline > table.forumline[cellpadding="3"]
+    th.thCornerR:nth-child(2)[width="100%"] {display: none}
+
+  td.bodyline > table.forumline[cellpadding="3"]
+    td.catHead[height="28"] {display: block}
+  td.bodyline > table.forumline[cellpadding="3"]
+    td.row1:nth-child(1)[width="150"][rowspan="2"][valign="top"][align="left"] 
+      {display: block; background-color: #ded; border-bottom: 1px solid lightgray; max-height: 50px}
+  td.bodyline > table.forumline[cellpadding="3"]
+    td.row1:nth-child(2)[valign="top"] {display: block}
+  
+  td.bodyline > table.forumline[cellpadding="3"]
+    td.row1:nth-child(1)[width="150"] br {display: none}
+  td.row1:nth-child(1)[width="150"] 
+    span.name {display: block; margin-bottom: 4px}
+  td.bodyline > table.forumline[cellpadding="3"]
+    td.row1:nth-child(1)[width="150"] span.postdetails b:first-child::after {content: ","}
+  
+ /* Szczegoly grupy */ 
+  
+   form[action*="groupcp.php"]:first-of-type > table.forumline
+    td.row1 {width: 90px}  
+  
+   form[action*="groupcp.php"][name="post"] > table.forumline
+    th {word-break: normal !important}
+  
+  form[action*="groupcp.php"][name="post"] > table.forumline
+    th:nth-child(1) {display: none}
+  form[action*="groupcp.php"][name="post"] > table.forumline
+  td[class^="row"]:nth-child(1) {display: none}
+  
+  form[action*="groupcp.php"][name="post"] > table.forumline
+    th:nth-child(5) {display: none}
+  form[action*="groupcp.php"][name="post"] > table.forumline
+  td[class^="row"]:nth-child(5) {display: none}
+  
+  form[action*="groupcp.php"][name="post"] > table.forumline
+    th:nth-child(6) {display: none}
+  form[action*="groupcp.php"][name="post"] > table.forumline
+  td[class^="row"]:nth-child(6) {display: none}
+   
+  /*** iframy i wstawki ***/
+  
+    /* iframe SNpoleca */
+  
+  div.sn td.genmed {max-width: 380px !important;}
+  div.sn br {margin-bottom: 8px} 
+  
+  div.sn td.genmed[width="170px"] {display: block !important; min-width: 380px !important;}
+  div.sn td[width="100px"] {display: block !important; min-width: 380px !important; text-align: center}
+  div.sn td[width="100px"] > table {min-width: 380px !important; text-align: center}
+  div.sn td.genmed:nth-of-type(1) a{display: block !important;}
+  div.sn td.genmed[align="left"] a{display: inline !important;}
+  
+  div.sn select {max-width: 80vw}
+  
+  /* iframe odpowiadania */
+  
+  body > table.forumline[cellpadding="3"] 
+    th[class^="thCorner"] {display: none}
+  body > table.forumline[cellpadding="3"] 
+    td[class^="row"] {display: block; width: 99%}
+  body > table.forumline[cellpadding="3"] 
+    td[width="22%"] {background-color: #ded; border-bottom: 1px solid lightgray}
+    
+}
