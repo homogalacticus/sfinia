@@ -1,3 +1,4 @@
+
  /* Ponizszy kod nalezy umiescic na koncu oryginalnego sfinia.css */
 
 @media (max-width: 760px) {
@@ -88,10 +89,10 @@
    td.bodyline > table.forumline[cellpadding="4"]
      th.thHead[colspan="2"] {display: table-cell}
 
-  /* Spis podforow */
+  /* Spis forow */
 
    form[action*=","] table.forumline[cellpadding="4"]  
-	  td {display: table-cell}
+	  td {display: table-cell; text-align: left}
   
   form[action*=","] table.forumline[cellpadding="4"]  
 	  tr td {height: auto !important; min-height: 14px !important}
@@ -114,8 +115,7 @@
 
 	form[action*=","] table.forumline[cellpadding="4"]  
 	  tr td:nth-child(2) span {display: block; width: auto; max-width: 100%}
-  form[action*=","] table.forumline[cellpadding="4"]
-	  tr td br {display: none}
+ 
   form[action*=","] table.forumline[cellpadding="4"]
 	  tr td a.topictitle {font-size: 10pt}
 	 
@@ -124,18 +124,53 @@
   form[action*=","] table.forumline[cellpadding="4"]
 	  tr td:nth-child(6) span.postdetails a {margin-left: 10px; font-size: 9pt}
   form[action*=","] table.forumline[cellpadding="4"]
-	  tr td:nth-child(6) img {height: 14px}
+	  tr td:nth-child(6) img {width: 30px; height: 15px}
 	
   form[action*=","] table.forumline[cellpadding="4"]
 	  tr td:nth-child(4)::before {content: "Autor: "; font-size: 8pt; font-weight: bold}
   form[action*=","] table.forumline[cellpadding="4"]
-	  tr td:nth-child(6)::before {content: "Ostatni post: "; font-size: 8pt; font-weight: bold}
+	  tr td:nth-child(6) span::before {content: "Ostatni post: "; font-size: 8pt; font-weight: bold}
 	form[action*=","] table.forumline[cellpadding="4"]  
 	  tr td:nth-child(6) {background-color: #f7f787}
   
 	form[action*=","] table.forumline[cellpadding="4"]  
 	  td {width: auto; min-width: 100px}     
-      
+   
+  /* Tabela subforow */
+  
+  form[action*=","] table.forumline[cellpadding="2"]  
+    th {display: none} 
+  
+  form[action*=","] table.forumline[cellpadding="2"]  
+    td.row1:nth-child(1) {display: none} 
+    
+   form[action*=","] table.forumline[cellpadding="2"]  
+    td.rowpic {display: none} 
+  
+  form[action*=","] table.forumline[cellpadding="2"]  
+    td {display: block; text-align: left}
+  
+    form[action*=","] table.forumline[cellpadding="2"]  
+    td.catLeft {text-align: center; margin-bottom: 4px}
+  
+   form[action*=","] table.forumline[cellpadding="2"]  
+    td.row1:nth-child(2) {padding-top: 4px} 
+   form[action*=","] table.forumline[cellpadding="2"]  
+    td.row2:nth-child(5) {padding-bottom: 8px} 
+  
+  form[action*=","] table.forumline[cellpadding="2"]  
+    td.row2:last-child {border-bottom: 1px solid lightgray}
+ 
+   form[action*=","] table.forumline[cellpadding="2"]  
+    td.row2:nth-child(3) span.gensmall::before {content: "Tematy: "}
+   form[action*=","] table.forumline[cellpadding="2"]  
+    td.row2:nth-child(4) span.gensmall::before {content: "Posty: "}
+   form[action*=","] table.forumline[cellpadding="2"]  
+    td.row2:nth-child(5) span.gensmall::before {content: "Ostatni post: "}
+  
+    form[action*=","] table.forumline[cellpadding="2"]  
+    td.row2:nth-child(5) img {width: 30px; height: 15px}
+  
   /* Widok postow */
      
   td.bodyline > table.forumline[cellpadding="3"]
@@ -146,7 +181,7 @@
 		 td.row2 {display: block; width: auto; height: auto}
 	
   td.bodyline > table.forumline[cellpadding="3"]
-		 tr[align="right"] > td[colspan="2"].catHead {display: none}
+		 tr[align="right"] > td[colspan="2"].catHead {display: none;}
   td.bodyline > table.forumline[cellpadding="3"]
 		 td.catBottom {height: 80px}
   td.bodyline > table.forumline[cellpadding="3"]
@@ -158,27 +193,28 @@
 		 span {min-width: 50px; max-width: 100%;}
 		
   td.bodyline > table.forumline[cellpadding="3"]
-		 > tbody > tr:nth-child(4) > td[width="150"][valign="top"][align="left"]:first-child 
-		  {display: inline-block; text-align: left; width: 99%; vertical-align: top; background-color: #ded}
+		 > tbody > tr > td[class^="row"][width="150"][valign="top"][align="left"]:first-child 
+		  {display: block; text-align: left; width: 99%; vertical-align: top; background-color: #ded; border-bottom: 1px solid lightgray}
+ 
   td.bodyline > table.forumline[cellpadding="3"]
-		 > tbody > tr:nth-child(4) > td:first-child span.name {font-size: 10pt}
+		 > tbody > tr > td[class^="row"][width="150"][valign="top"][align="left"]:first-child span.name {font-size: 10pt}
   td.bodyline > table.forumline[cellpadding="3"]
-		 > tbody > tr:nth-child(4) > td:first-child span.postdetails {display: inline}
+		 > tbody > tr > td[class^="row"][width="150"][valign="top"][align="left"]:first-child span.postdetails {display: inline}
   
 	td.bodyline > table.forumline[cellpadding="3"]	 
-		 > tbody > tr:nth-child(4) > td:first-child span.postdetails br {display: none}
+		 > tbody > tr > td[class^="row"][width="150"][valign="top"][align="left"]:first-child span.postdetails br {display: none}
   td.bodyline > table.forumline[cellpadding="3"]
-		 > tbody > tr:nth-child(4) > td:first-child span.postdetails br:nth-of-type(1) {display: block}
+		 > tbody > tr > td[class^="row"][width="150"][valign="top"][align="left"]:first-child span.postdetails br:nth-of-type(1) {display: block}
   td.bodyline > table.forumline[cellpadding="3"]
-		 > tbody > tr:nth-child(4) > td:first-child span.postdetails br:nth-of-type(7) {display: block}
+		 > tbody > tr > td[class^="row"][width="150"][valign="top"][align="left"]:first-child span.postdetails br:nth-of-type(7) {display: block}
  td.bodyline > table.forumline[cellpadding="3"] 
-		 > tbody > tr:nth-child(4) > td:first-child span.postdetails br:nth-of-type(8) {display: block}
+		 > tbody > tr > td[class^="row"][width="150"][valign="top"][align="left"]:first-child span.postdetails br:nth-of-type(8) {display: block}
   
   td.bodyline > table.forumline[cellpadding="3"]
 		 img[title="Post"] {width: 25px; height: 20px}
 	
   td.bodyline > table.forumline[cellpadding="3"]
-		 span.postdetails input {display: none} 
+		 span.postdetails input.liteoption {display: none} 
   td.bodyline > table.forumline[cellpadding="3"]
 		 span.postdetails img {display: inline} 
   td.bodyline > table.forumline[cellpadding="3"]
@@ -188,7 +224,19 @@
 		 tbody[id] {display: none} 
   td.bodyline > table.forumline[cellpadding="3"]
 		 span.postdetails span.gen {display: block} 
-   
+
+  td.bodyline > table.forumline[cellpadding="3"]
+		 td.row2[colspan="2"]:first-child {display: none} 
+  
+   td.bodyline > table.forumline[cellpadding="3"]:nth-of-type(4)
+     td.row2[colspan="2"]:first-child::before {content: "Ankieta: "}  
+  
+  td.bodyline > table.forumline[cellpadding="3"]:nth-of-type(4) 
+     td.row2[colspan="2"]:first-child {display: block}  
+  
+  td.bodyline > table.forumline[cellpadding="3"] 
+  table[width="90%"][cellpadding="3"][align="center"] {width: 96%}
+  
   /* Edycja posta i Edycja PM */
   
  form[name="post"] table.forumline[cellpadding="3"]
@@ -235,13 +283,16 @@
   
   form[action*="privmsg.php?folder"] 
     table.forumline td.row2 {min-width: 55px} 
- 
- /* Widok profilu uzytkownika */ 
+  
+  form[action*="privmsg.php?folder"] 
+    table[width="90%"][cellpadding="3"][align="center"] {width: 96%}
+  
+ /* Profil uzytkownika */ 
   
   td.bodyline > table.forumline[cellpadding="3"][align="center"] 
     tr {display: table-row}
   td.bodyline > table.forumline[cellpadding="3"][align="center"] 
-   > tbody > tr:nth-child(2) > td[class^="cat"] {display: none}
+   > tbody > tr:nth-child(2) > td[class^="cat"][width="40%"] {display: none}
   td.bodyline > table.forumline[cellpadding="3"][align="center"] 
     th {display: table-cell}
   td.bodyline > table.forumline[cellpadding="3"][align="center"] 
@@ -311,7 +362,7 @@
   td.bodyline > table.forumline[cellpadding="4"] 
     > tbody > tr > td:nth-child(7) {display: none}
   
-  /* Widok wynikow wyszukiwania z postami */
+  /* Wyniki wyszukiwania z postami */
   
   td.bodyline > table.forumline[cellpadding="3"]
     th.thCornerL[width="150"] {display: none}
@@ -332,6 +383,9 @@
     span.name {display: block; margin-bottom: 4px}
   td.bodyline > table.forumline[cellpadding="3"]
     td.row1:nth-child(1)[width="150"] span.postdetails b:first-child::after {content: ","}
+ 
+  td.bodyline > table.forumline[cellpadding="3"]
+    td.row1:nth-child(2)[width="100%"][valign="top"] span.postdetails b:nth-child(2) a::after {content: " >>> "}
   
  /* Szczegoly grupy */ 
   
@@ -370,6 +424,7 @@
   div.sn td.genmed[align="left"] a{display: inline !important;}
   
   div.sn select {max-width: 80vw}
+
   
   /* iframe odpowiadania */
   
@@ -379,5 +434,5 @@
     td[class^="row"] {display: block; width: 99%}
   body > table.forumline[cellpadding="3"] 
     td[width="22%"] {background-color: #ded; border-bottom: 1px solid lightgray}
-    
+ 
 }
