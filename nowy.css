@@ -259,8 +259,14 @@ input.liteoption {
   img {max-height: 80vh}
   
  body, div, table, tr, th, td, span {max-width: 100%;}
- td:not(table.forumline td) {display: block;}
- 
+ td:not(table.forumline td) {display: block; min-width: 86vw; padding-bottom: 8px; text-align: left}
+
+ td.bodyline table:not(table.forumline)[width="100%"]:first-of-type td:not(table.forumline td) {text-align: center}
+ td.bodyline table:not(table.forumline)[width="100%"]:first-of-type table:first-of-type td:not(table.forumline td) {text-align: left; padding-left: 20px}
+ td.bodyline table:not(table.forumline)[width="100%"][cellpadding="2"]:nth-of-type(2) span {display: block}
+ td.bodyline table:not(table.forumline)[cellspacing="3"][align="center"]:last-of-type td:not(table.forumline td) {text-align: left}
+ td.bodyline table:not(table.forumline)[cellspacing="3"][align="center"]:last-of-type td:not(table.forumline td) {text-align: left}
+  
   span.postbody img {max-width: 98%}
   span.postbody span {min-width: 8px !important; display: inline}
   
@@ -275,7 +281,7 @@ input.liteoption {
   
   select {display:block; min-width: 50px; max-width: 300px}
   input {min-width: 25px; max-width: 200px; text-indent: 0px; padding: 3px}
-  textarea {max-width: 88vw}
+  textarea {max-width: 86vw}
   
   div.DoRiA {display: none}
   ins {display: none !important;} 
@@ -414,6 +420,9 @@ input.liteoption {
     td.row2:nth-child(5) img {width: 30px; height: 15px}
   
   /* Widok postow */
+  
+  td.bodyline > table.forumline[cellpadding="3"] 
+    table td[valign="top"][nowrap="nowrap"] {display: block; text-align: right}
      
   td.bodyline > table.forumline[cellpadding="3"]
      th[class^="th"] {display: none}
@@ -472,18 +481,23 @@ input.liteoption {
   
   td.bodyline > table.forumline[cellpadding="3"]:nth-of-type(4) 
      td.row2[colspan="2"]:first-child {display: block}  
-  
+    
   td.bodyline > table.forumline[cellpadding="3"] 
   table[width="90%"][cellpadding="3"][align="center"] {width: 96%}
   
   td.bodyline > table.forumline[cellpadding="3"] 
-    table[cellpadding="4"] table[cellpadding="2"] span.gen {word-break: normal !important; min-width: 36px}
-  
+    table[cellpadding="4"] table[cellpadding="2"] td[align="center"] span.gen {word-break: normal !important; min-width: 36px}
+ 
   td.bodyline > table.forumline[cellpadding="3"] 
-  table td[width="100%"] {display: block}
+      table[cellpadding="4"] table[cellpadding="2"] > tbody > tr > td:nth-child(1) {display: block}
   td.bodyline > table.forumline[cellpadding="3"] 
-  table td[valign="top"][nowrap="nowrap"] {display: block; text-align: right}
-  
+      table[cellpadding="4"] table[cellpadding="2"] > tbody > tr > td:nth-child(2) {display: block}
+   
+  td.bodyline > table.forumline[cellpadding="3"] 
+    table td[width="100%"] {display: block}
+  td.bodyline > table.forumline[cellpadding="3"] 
+    table td[valign="top"][nowrap="nowrap"] {display: block; text-align: right}
+    
   /* Edycja posta i Edycja PM */
   
  form[name="post"] table.forumline[cellpadding="3"]
@@ -516,7 +530,7 @@ input.liteoption {
     tr:nth-child(5) {display: table-row}
   form[name="post"] table.forumline[cellpadding="3"] table[cellpadding="5"]
     tr:last-child {display: table-row}
-       
+         
    /* Skrzynka PM */
   
   form[name="privmsg_list"] table.forumline th {display: none}
@@ -674,7 +688,6 @@ input.liteoption {
   div.sn td.genmed[align="left"] a{display: inline !important;}
   
   div.sn select {max-width: 80vw}
-
   
   /* iframe odpowiadania */
   
