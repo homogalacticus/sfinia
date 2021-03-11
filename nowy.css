@@ -577,12 +577,12 @@ input.liteoption {
    form[action*="search.php"] table.forumline
     td {display: block; text-align: left; max-width: 99%; width: 99%}
   
-   /* Widok wynikow wyszukiwania bez postow */
+   /* Wyniki wyszukiwania bez postow */
   
   td.bodyline > table.forumline[cellpadding="4"] 
     > tbody > tr > th.thCornerL[width="4%"] {display: none}
   td.bodyline > table.forumline[cellpadding="4"] 
-    > tbody > tr > td:nth-child(1) {display: none}
+    > tbody > tr > td.row1[valign="middle"][align="center"]:nth-child(1) {display: none}
 
   td.bodyline > table.forumline[cellpadding="4"] 
     > tbody > tr > th.thTop:nth-child(4) {display: none}
@@ -603,6 +603,9 @@ input.liteoption {
     > tbody > tr > th.thCornerR:nth-child(7) {display: none}
   td.bodyline > table.forumline[cellpadding="4"] 
     > tbody > tr > td:nth-child(7) {display: none}
+  
+  td.bodyline > table.forumline[cellpadding="4"] 
+    > tbody > tr > td.catBottom {display: table-cell; width: 99%}
   
   /* Wyniki wyszukiwania z postami */
   
@@ -666,6 +669,7 @@ input.liteoption {
   div.sn td.genmed[align="left"] a{display: inline !important;}
   
   div.sn select {max-width: 80vw}
+
   
   /* iframe odpowiadania */
   
