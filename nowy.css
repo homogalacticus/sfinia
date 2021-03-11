@@ -257,12 +257,12 @@ input.liteoption {
   * {word-break: break-word !important;} 
   
   img {max-height: 80vh}
-  span.postbody img {max-width: 98%}
   
  body, div, table, tr, th, td, span {max-width: 100%;}
  td:not(table.forumline td) {display: block;}
  
-  span.nav {min-width: 88vw; display: block}
+  span.postbody img {max-width: 98%}
+  span.postbody span {min-width: 8px !important; display: inline}
   
   span.mainmenu a {display: block; font-size: 10pt} 
   span.mainmenu img {height: 20px; width: 20px}
@@ -281,7 +281,7 @@ input.liteoption {
   ins {display: none !important;} 
   
   tr, td, th {height: auto !important; min-height: 14px !important;}
-   
+  
   /* Strona glowna i Spis kategorii */
 
   td.bodyline > table.forumline[cellpadding="2"]
@@ -351,9 +351,9 @@ input.liteoption {
 	  tr td:nth-child(6) {display: block; margin-bottom: 4px}
 	  
   form[action*=","] table.forumline[cellpadding="4"]
-	  td:nth-child(2) {border-top: solid black 1px}
+	  td.row1[width="100%"]:nth-child(2) {background-color: #ded; border-bottom: solid 1px lightgray; border-top: solid 1px silver}
   form[action*=","] table.forumline[cellpadding="4"]
-	  td:nth-child(6) {border-bottom: solid black 1px}
+	  td:nth-child(6) {border-bottom: solid 1px silver}
 
 	form[action*=","] table.forumline[cellpadding="4"]  
 	  tr td:nth-child(2) span {display: block; width: auto; max-width: 100%}
@@ -432,9 +432,6 @@ input.liteoption {
 		 td.catBottom input {margin-top: 4px}
 	
   td.bodyline > table.forumline[cellpadding="3"]
-		 span {min-width: 50px; max-width: 100%;}
-		
-  td.bodyline > table.forumline[cellpadding="3"]
 		 > tbody > tr > td[class^="row"][width="150"][valign="top"][align="left"]:first-child 
 		  {display: block; text-align: left; width: 99%; vertical-align: top; background-color: #ded; border-bottom: 1px solid lightgray}
  
@@ -471,13 +468,21 @@ input.liteoption {
 		 td.row2[colspan="2"]:first-child {display: none} 
   
    td.bodyline > table.forumline[cellpadding="3"]:nth-of-type(4)
-     td.row2[colspan="2"]:first-child::before {content: "Ankieta: "}  
+     td.row2[colspan="2"]:first-child::before {content: "Ankieta: "; font-size: 10pt}  
   
   td.bodyline > table.forumline[cellpadding="3"]:nth-of-type(4) 
      td.row2[colspan="2"]:first-child {display: block}  
   
   td.bodyline > table.forumline[cellpadding="3"] 
   table[width="90%"][cellpadding="3"][align="center"] {width: 96%}
+  
+  td.bodyline > table.forumline[cellpadding="3"] 
+    table[cellpadding="4"] table[cellpadding="2"] span.gen {word-break: normal !important; min-width: 36px}
+  
+  td.bodyline > table.forumline[cellpadding="3"] 
+  table td[width="100%"] {display: block}
+  td.bodyline > table.forumline[cellpadding="3"] 
+  table td[valign="top"][nowrap="nowrap"] {display: block; text-align: right}
   
   /* Edycja posta i Edycja PM */
   
@@ -679,5 +684,5 @@ input.liteoption {
     td[class^="row"] {display: block; width: 99%}
   body > table.forumline[cellpadding="3"] 
     td[width="22%"] {background-color: #ded; border-bottom: 1px solid lightgray}
- 
+  
 }
