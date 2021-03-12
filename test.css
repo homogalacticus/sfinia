@@ -46,6 +46,9 @@
   
   tr, td, th {height: auto !important; min-height: 14px !important;}
   
+  table:not(table.forumline)[width="100%"] td[align="right"] span.nav a
+  {display: inline-block; border: solid 1px gray; padding: 2px; min-width: 14px; background-color: #fb4; text-align: center; margin-left: 4px}
+  
   /* Strona glowna i Spis kategorii */
 
   td.bodyline > table.forumline[cellpadding="2"]
@@ -179,81 +182,81 @@
   
   /* Widok postow */
   
-  td.bodyline > table.forumline[cellpadding="3"] 
+  td.bodyline > table.forumline[cellpadding="3"]:not(table[align="center"])
     table td[valign="top"][nowrap="nowrap"] {display: block; text-align: right}
      
-  td.bodyline > table.forumline[cellpadding="3"]
+  td.bodyline > table.forumline[cellpadding="3"]:not(table[align="center"])
      th[class^="th"] {display: none}
-  td.bodyline > table.forumline[cellpadding="3"]
+  td.bodyline > table.forumline[cellpadding="3"]:not(table[align="center"])
 		 td.row1 {display: block; width: auto; height: auto}
-  td.bodyline > table.forumline[cellpadding="3"]
+  td.bodyline > table.forumline[cellpadding="3"]:not(table[align="center"])
 		 td.row2 {display: block; width: auto; height: auto}
 	
-  td.bodyline > table.forumline[cellpadding="3"]
+  td.bodyline > table.forumline[cellpadding="3"]:not(table[align="center"])
 		 tr[align="right"] > td[colspan="2"].catHead {display: none;}
-  td.bodyline > table.forumline[cellpadding="3"]
+  td.bodyline > table.forumline[cellpadding="3"]:not(table[align="center"])
 		 td.catBottom {height: 80px}
-  td.bodyline > table.forumline[cellpadding="3"]
+  td.bodyline > table.forumline[cellpadding="3"]:not(table[align="center"])
 		 td.catBottom table {width: 100%;}
-  td.bodyline > table.forumline[cellpadding="3"]
+  td.bodyline > table.forumline[cellpadding="3"]:not(table[align="center"])
 		 td.catBottom input {margin-top: 4px}
 	
-  td.bodyline > table.forumline[cellpadding="3"]
+  td.bodyline > table.forumline[cellpadding="3"]:not(table[align="center"])
 		 > tbody > tr > td[class^="row"][width="150"][valign="top"][align="left"]:first-child 
 		  {display: block; text-align: left; width: 99%; vertical-align: top; background-color: #ded; border-bottom: 1px solid lightgray}
  
-  td.bodyline > table.forumline[cellpadding="3"]
+  td.bodyline > table.forumline[cellpadding="3"]:not(table[align="center"])
 		 > tbody > tr > td[class^="row"][width="150"][valign="top"][align="left"]:first-child span.name {font-size: 10pt}
-  td.bodyline > table.forumline[cellpadding="3"]
+  td.bodyline > table.forumline[cellpadding="3"]:not(table[align="center"])
 		 > tbody > tr > td[class^="row"][width="150"][valign="top"][align="left"]:first-child span.postdetails {display: inline}
   
-	td.bodyline > table.forumline[cellpadding="3"]	 
+	td.bodyline > table.forumline[cellpadding="3"]:not(table[align="center"])	 
 		 > tbody > tr > td[class^="row"][width="150"][valign="top"][align="left"]:first-child span.postdetails br {display: none}
-  td.bodyline > table.forumline[cellpadding="3"]
+  td.bodyline > table.forumline[cellpadding="3"]:not(table[align="center"])
 		 > tbody > tr > td[class^="row"][width="150"][valign="top"][align="left"]:first-child span.postdetails br:nth-of-type(1) {display: block}
-  td.bodyline > table.forumline[cellpadding="3"]
+  td.bodyline > table.forumline[cellpadding="3"]:not(table[align="center"])
 		 > tbody > tr > td[class^="row"][width="150"][valign="top"][align="left"]:first-child span.postdetails br:nth-of-type(7) {display: block}
- td.bodyline > table.forumline[cellpadding="3"] 
+ td.bodyline > table.forumline[cellpadding="3"]:not(table[align="center"]) 
 		 > tbody > tr > td[class^="row"][width="150"][valign="top"][align="left"]:first-child span.postdetails br:nth-of-type(8) {display: block}
   
-  td.bodyline > table.forumline[cellpadding="3"]
+  td.bodyline > table.forumline[cellpadding="3"]:not(table[align="center"])
 		 img[title="Post"] {width: 25px; height: 20px}
 	
-  td.bodyline > table.forumline[cellpadding="3"]
+  td.bodyline > table.forumline[cellpadding="3"]:not(table[align="center"])
 		 span.postdetails input.liteoption {display: none} 
-  td.bodyline > table.forumline[cellpadding="3"]
+  td.bodyline > table.forumline[cellpadding="3"]:not(table[align="center"])
 		 span.postdetails img {display: inline} 
-  td.bodyline > table.forumline[cellpadding="3"]
+  td.bodyline > table.forumline[cellpadding="3"]:not(table[align="center"])
 		 span.postdetails form {display: inline}
 	
-  td.bodyline > table.forumline[cellpadding="3"]
+  td.bodyline > table.forumline[cellpadding="3"]:not(table[align="center"])
 		 tbody[id] {display: none} 
-  td.bodyline > table.forumline[cellpadding="3"]
+  td.bodyline > table.forumline[cellpadding="3"]:not(table[align="center"])
 		 span.postdetails span.gen {display: block} 
 
-  td.bodyline > table.forumline[cellpadding="3"]
+  td.bodyline > table.forumline[cellpadding="3"]:not(table[align="center"])
 		 td.row2[colspan="2"]:first-child {display: none} 
   
-   td.bodyline > table.forumline[cellpadding="3"]:nth-of-type(4)
+   td.bodyline > table.forumline[cellpadding="3"]:not(table[align="center"]):nth-of-type(4)
      td.row2[colspan="2"]:first-child::before {content: "Ankieta: "; font-size: 10pt}  
   
-  td.bodyline > table.forumline[cellpadding="3"]:nth-of-type(4) 
+  td.bodyline > table.forumline[cellpadding="3"]:not(table[align="center"]):nth-of-type(4) 
      td.row2[colspan="2"]:first-child {display: block}  
     
-  td.bodyline > table.forumline[cellpadding="3"] 
+  td.bodyline > table.forumline[cellpadding="3"]:not(table[align="center"]) 
   table[width="90%"][cellpadding="3"][align="center"] {width: 96%}
   
-  td.bodyline > table.forumline[cellpadding="3"] 
+  td.bodyline > table.forumline[cellpadding="3"]:not(table[align="center"]) 
     table[cellpadding="4"] table[cellpadding="2"] td[align="center"] span.gen {word-break: normal !important; min-width: 36px}
  
-  td.bodyline > table.forumline[cellpadding="3"] 
+  td.bodyline > table.forumline[cellpadding="3"]:not(table[align="center"]) 
       table[cellpadding="4"] table[cellpadding="2"] > tbody > tr > td:nth-child(1) {display: block}
-  td.bodyline > table.forumline[cellpadding="3"] 
+  td.bodyline > table.forumline[cellpadding="3"]:not(table[align="center"]) 
       table[cellpadding="4"] table[cellpadding="2"] > tbody > tr > td:nth-child(2) {display: block}
    
-  td.bodyline > table.forumline[cellpadding="3"] 
+  td.bodyline > table.forumline[cellpadding="3"]:not(table[align="center"]) 
     table td[width="100%"] {display: block}
-  td.bodyline > table.forumline[cellpadding="3"] 
+  td.bodyline > table.forumline[cellpadding="3"]:not(table[align="center"]) 
     table td[valign="top"][nowrap="nowrap"] {display: block; text-align: right}
     
   /* Edycja posta i Edycja PM */
@@ -308,16 +311,20 @@
   form[action*="privmsg.php?folder"] 
     table[width="90%"][cellpadding="3"][align="center"] {width: 96%}
   
- /* Profil uzytkownika */ 
+ /* Podglad profilu uzytkownika */ 
+ 
+  td.bodyline > table.forumline[cellpadding="3"][align="center"] 
+   > tbody > tr:nth-child(2) > td.catLeft[width="40%"] {display: none}
+
+  td.bodyline > table.forumline[cellpadding="3"][align="center"] 
+   > tbody > tr:nth-child(2) > td.catRight[width="60%"] {display: block; width: 99% !important}
+
+  td.bodyline > table.forumline[cellpadding="3"][align="center"] 
+  td.row1[valign="top"][height="6"][align="center"] {display: block}
   
   td.bodyline > table.forumline[cellpadding="3"][align="center"] 
-    tr {display: table-row}
-  td.bodyline > table.forumline[cellpadding="3"][align="center"] 
-   > tbody > tr:nth-child(2) > td[class^="cat"][width="40%"] {display: none}
-  td.bodyline > table.forumline[cellpadding="3"][align="center"] 
-    th {display: table-cell}
-  td.bodyline > table.forumline[cellpadding="3"][align="center"] 
-    td {text-align: left; min-width : 124px}
+    td[nowrap="nowrap"][align="right"] {text-align: left; width : 105px}
+  
   td.bodyline > table.forumline[cellpadding="3"][align="center"] 
     td:last-child {min-width: 99%}
  
@@ -348,7 +355,7 @@
   
   /* FAQ systemowe */
   
-    td.bodyline > table.forumline[cellpadding="3"]
+    td.bodyline > table.forumline[cellpadding="3"][align="center"]
      th[class="thHead"] {display: table-cell}
   
   /* Widok wyszukiwarki */
@@ -388,28 +395,30 @@
   
   /* Wyniki wyszukiwania z postami */
   
-  td.bodyline > table.forumline[cellpadding="3"]
+  td.bodyline > table.forumline[cellpadding="3"][align="center"]
     th.thCornerL[width="150"] {display: none}
-  td.bodyline > table.forumline[cellpadding="3"]
+  td.bodyline > table.forumline[cellpadding="3"][align="center"]
     th.thCornerR:nth-child(2)[width="100%"] {display: none}
 
-  td.bodyline > table.forumline[cellpadding="3"]
+  td.bodyline > table.forumline[cellpadding="3"][align="center"]
     td.catHead[height="28"] {display: block}
-  td.bodyline > table.forumline[cellpadding="3"]
+  td.bodyline > table.forumline[cellpadding="3"][align="center"]
     td.row1:nth-child(1)[width="150"][rowspan="2"][valign="top"][align="left"] 
-      {display: block; background-color: #ded; border-bottom: 1px solid lightgray; max-height: 50px}
-  td.bodyline > table.forumline[cellpadding="3"]
+      {display: block; background-color: #ded; border-bottom: 1px solid lightgray; max-height: 50px; width: 99%}
+  td.bodyline > table.forumline[cellpadding="3"][align="center"]
     td.row1:nth-child(2)[valign="top"] {display: block}
   
-  td.bodyline > table.forumline[cellpadding="3"]
-    td.row1:nth-child(1)[width="150"] br {display: none}
-  td.row1:nth-child(1)[width="150"] 
-    span.name {display: block; margin-bottom: 4px}
-  td.bodyline > table.forumline[cellpadding="3"]
+  td.bodyline > table.forumline[cellpadding="3"][align="center"]
+    td.row1:nth-child(1)[width="150"] br {display: none} 
+  td.bodyline > table.forumline[cellpadding="3"][align="center"]
+    td.row1:nth-child(1)[width="150"] span.name {display: block; margin-bottom: 4px}
+  td.bodyline > table.forumline[cellpadding="3"][align="center"]
     td.row1:nth-child(1)[width="150"] span.postdetails b:first-child::after {content: ","}
  
-  td.bodyline > table.forumline[cellpadding="3"]
+  td.bodyline > table.forumline[cellpadding="3"][align="center"]
     td.row1:nth-child(2)[width="100%"][valign="top"] span.postdetails b:nth-child(2) a::after {content: " >>> "}
+  td.bodyline > table.forumline[cellpadding="3"][align="center"]
+    td.row1:nth-child(2)[width="100%"][valign="top"] span.postdetails b:nth-child(2) a {display: inline-block; margin-top: 5px}
   
  /* Szczegoly grupy */ 
   
