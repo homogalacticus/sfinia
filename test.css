@@ -1,7 +1,7 @@
 
  /* Ponizszy kod nalezy umiescic na koncu oryginalnego sfinia.css */
 
-@media (max-width: 760px) {
+@media (max-width: 1040px) {
    
   /* Ustawienia ogolne */
 
@@ -84,7 +84,6 @@
   td.bodyline > table.forumline[cellpadding="2"]
     tr td.catLeft span.cattitle {padding: 4px}  
    
-  
     /* Spis grup */
   
   td.bodyline > table.forumline[cellpadding="4"]
@@ -291,9 +290,7 @@
     tr:nth-child(5) {display: table-row}
   form[name="post"] table.forumline[cellpadding="3"] table[cellpadding="5"]
     tr:last-child {display: table-row}
-  
-  
-       
+        
    /* Skrzynka PM */
   
   form[name="privmsg_list"] table.forumline th {display: none}
@@ -457,8 +454,7 @@
   div.sn td.genmed[align="left"] a{display: inline !important;}
   
   div.sn select {max-width: 80vw}
-
-  
+ 
   /* iframe odpowiadania */
   
   body > table.forumline[cellpadding="3"] 
